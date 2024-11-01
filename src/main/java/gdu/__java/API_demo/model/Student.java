@@ -1,5 +1,6 @@
 package gdu.__java.API_demo.model;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -11,8 +12,12 @@ public class Student
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
+	
+	@Column(columnDefinition = "nvarchar(255)")
 	private String name;
 	private String studentnumber;
+	
+	@Column(columnDefinition = "nvarchar(255)")
 	private String address;
 	private String email;
 	public int getId() {
